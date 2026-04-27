@@ -77,9 +77,10 @@ Includes advanced queries such as:
 Cafe_Finder/
 │
 ├── app.py              # Flask backend (routing + database queries)
-├── schema.sql          # Database schema (table definitions)
-├── sample_data.sql     # Sample dataset for testing
-├── queries.sql         # SQL analytics and complex queries
+├── database/
+│   └── schema.sql          # Database schema (table definitions)
+│   └── sample_data.sql     # Sample dataset for testing
+│   └── queries.sql         # SQL analytics and complex queries
 │
 ├── templates/
 │   └── index.html      # Frontend UI template 
