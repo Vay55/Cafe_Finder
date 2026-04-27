@@ -111,37 +111,37 @@ The filtering system modifies the SQL query only when filters are selected, ensu
 The system uses a relational database with four main tables:
 
 **Users**
-user_id (Primary Key)
-username
-email
-created_at
+- user_id (Primary Key)
+- username
+- email
+- created_at
 
 ---
 **Cafes**
-cafe_id (Primary Key)
-name
-location
-has_wifi (BOOLEAN)
-has_outlets (BOOLEAN)
+- cafe_id (Primary Key)
+- name
+- location
+- has_wifi (BOOLEAN)
+- has_outlets (BOOLEAN)
 
 ---
 **Reviews**
-review_id (Primary Key)
-user_id (Foreign Key)
-cafe_id (Foreign Key)
-quietness_rating
-comfort_rating
-outlet_rating
-overall_rating
-comment
-created_at
+- review_id (Primary Key)
+- user_id (Foreign Key)
+- cafe_id (Foreign Key)
+- quietness_rating
+- comfort_rating
+- outlet_rating
+- overall_rating
+- comment
+- created_at
 
 ---
 **Saved Cafes**
-user_id (Foreign Key)
-cafe_id (Foreign Key)
-saved_at
-Composite Primary Key (user_id, cafe_id)
+- user_id (Foreign Key)
+- cafe_id (Foreign Key)
+- saved_at
+- Composite Primary Key (user_id, cafe_id)
 
 ---
 
