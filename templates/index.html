@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<title>Cafe Finder</title>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <h1>☕ Cafe Finder</h1>
+    <p class="subtitle">Find study-friendly cafes with WiFi and outlets.</p>
+</header>
+
+<form method="GET">
+    <input type="text" name="search" placeholder="Search cafes...">
+
+    <label class="checkbox">
+        <input type="checkbox" name="wifi">
+        WiFi
+    </label>
+
+    <label class="checkbox">
+        <input type="checkbox" name="outlets">
+        Outlets
+    </label>
+
+    <button type="submit">Search</button>
+</form>
+
+<div class="grid">
+
+{% for cafe in cafes %}
+<div class="card">
+    <h2>{{ cafe[1] }}</h2>
+    <p class="location">📍 {{ cafe[2] }}</p>
+
+    <div class="tags">
+        {% if cafe[3] %}
+        <span class="tag">WiFi</span>
+        {% endif %}
+
+        {% if cafe[4] %}
+        <span class="tag">Power Outlets</span>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}
+
+</div>
+
+{% if cafes|length == 0 %}
+<p class="empty">No cafes found.</p>
+{% endif %}
+
+</div>
+
+</body>
+</html>
