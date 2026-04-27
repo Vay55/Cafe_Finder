@@ -210,7 +210,7 @@ Using foreign keys between users, cafes, and reviews ensures data consistency an
 
 Jinja2 allows backend data to be injected directly into HTML templates, simplifying frontend logic.
 
-###S ystem Design Insight
+### System Design Insight
 
 The project demonstrates how backend logic, database structure, and frontend rendering work together in a full-stack application.
 
