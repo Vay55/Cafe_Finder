@@ -239,10 +239,6 @@ The project demonstrates how backend logic, database structure, and frontend ren
 
 Cafe Finder demonstrates how Flask, PostgreSQL, and frontend templates can be combined into a functional full-stack application.
 
-It highlights important concepts such as relational database design, dynamic query building, and backend-frontend integration.
-
-This project serves as a strong foundation for building more advanced systems involving analytics, user interaction, and recommendation engines.
-
 ---
 
 ## Status
