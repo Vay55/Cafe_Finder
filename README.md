@@ -89,22 +89,24 @@ Cafe_Finder/
 │   └── wood_table.jpg  # Background image asset
 │
 └── README.md
+```
+---
 
-##Backend Overview (app.py)
+## Backend Overview (app.py)
 
 The Flask backend handles all core application logic.
 
-It is responsible for:
+It's responsible for:
 
-Connecting to the PostgreSQL database using psycopg2
-Handling HTTP requests from the frontend
-Reading user input from the search bar and filters
-Dynamically constructing SQL queries based on user input
-Executing queries and fetching results
+- Connecting to the PostgreSQL database using psycopg2
+- Handling HTTP requests from the frontend
+- Reading user input from the search bar and filters
+- Dynamically constructing SQL queries based on user input
+- Executing queries and fetching results
 
 The filtering system modifies the SQL query only when filters are selected, ensuring flexibility and efficiency.
 
-##Database Design
+## Database Design
 
 The system uses a relational database with four main tables:
 
@@ -113,6 +115,7 @@ user_id (Primary Key)
 username
 email
 created_at
+
 ---
 **Cafes**
 cafe_id (Primary Key)
@@ -120,6 +123,7 @@ name
 location
 has_wifi (BOOLEAN)
 has_outlets (BOOLEAN)
+
 ---
 **Reviews**
 review_id (Primary Key)
@@ -131,43 +135,45 @@ outlet_rating
 overall_rating
 comment
 created_at
+
 ---
 **Saved Cafes**
 user_id (Foreign Key)
 cafe_id (Foreign Key)
 saved_at
 Composite Primary Key (user_id, cafe_id)
+
 ---
 
-##How to Run
+## How to Run
 
-###1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/Cafe_Finder.git
 cd Cafe_Finder
 ```
 
-###2. Create database
+### 2. Create database
 
 ```bash
 CREATE DATABASE cafefinder;
 ```
 
-###3. Run schema and sample data
+### 3. Run schema and sample data
 
 ```bash
 psql -U your_username -d cafefinder -f schema.sql
 psql -U your_username -d cafefinder -f sample_data.sql
 ```
 
-###4. Install dependencies
+### 4. Install dependencies
 
 ```bash
 pip install flask psycopg2
 ```
 
-###5. Configure database connection
+### 5. Configure database connection
 
 ```bash
 conn = psycopg2.connect(
@@ -178,46 +184,46 @@ conn = psycopg2.connect(
 )
 ```
 
-###6. Run the application
+### 6. Run the application
 
 ```bash
 python app.py
 ```
 
-Open in browser:
+### Open in browser:
 
 ```bash
 http://127.0.0.1:5000/
 ```
 ---
 
-##Experiments and Observations
-###Dynamic SQL Construction
+## Experiments and Observations
+### Dynamic SQL Construction
 
 Building queries dynamically based on user input allows flexible filtering but requires careful handling to avoid unnecessary conditions.
 
-###Database Relationships
+### Database Relationships
 
 Using foreign keys between users, cafes, and reviews ensures data consistency and reflects real-world relational structures.
 
-###Template Rendering
+### Template Rendering
 
 Jinja2 allows backend data to be injected directly into HTML templates, simplifying frontend logic.
 
-###System Design Insight
+###S ystem Design Insight
 
 The project demonstrates how backend logic, database structure, and frontend rendering work together in a full-stack application.
 
 ---
 
-##Limitations
+## Limitations
 - No authentication system
 - No frontend interactivity beyond filtering
 - No API layer (Flask renders pages directly)
 - No deployment setup
 - No user-generated review input through UI
 
-##Future Improvements
+## Future Improvements
 - Add user authentication (login/signup)
 - Allow users to submit reviews through UI
 - Add interactive map integration (Google Maps API)
@@ -228,7 +234,7 @@ The project demonstrates how backend logic, database structure, and frontend ren
 
 ---
 
-##Conclusion
+## Conclusion
 
 Cafe Finder demonstrates how Flask, PostgreSQL, and frontend templates can be combined into a functional full-stack application.
 
@@ -238,7 +244,7 @@ This project serves as a strong foundation for building more advanced systems in
 
 ---
 
-##Status
+## Status
 
 ✔ Completed
 ✔ Fully Functional
