@@ -6,6 +6,7 @@ Cafe Finder is a full-stack web application that helps users discover and filter
 
 The application focuses on integrating relational database design with dynamic query handling in a web environment. Users can search for cafes, apply filters, and view results that are rendered in real time.
 
+![Uploading Cafefind.png…]()
 
 ---
 
